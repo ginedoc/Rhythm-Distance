@@ -6,16 +6,16 @@
 
 * for example (in main)
 
-<pre><code>	m1 = 10
-	m2 = 11
+<pre><code>	
+    // empty music segment
 	b=RhythmSegment()		
 	v=RhythmSegment()
+
+    // add notes to rhythm segment
 	b.append(notes_in_measure(score.measure(m1).parts[0].flat))
 	v.append(notes_in_measure(score.measure(m2).parts[0].flat))
-	print(ruler.execute(b, v))
-	b=RhythmSegment()		
-	v=RhythmSegment()
-	b.append(notes_in_measure(score.measure(m1).parts[1].flat))
-	v.append(notes_in_measure(score.measure(m2).parts[1].flat))
-	print(ruler.execute(b, v))
+
+    // calculate the distance by ruler
+	distance = ruler.execute(b, v)
+	
 </code><pre>
